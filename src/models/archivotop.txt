@@ -1,0 +1,20 @@
+Profesor 1: Nombre: pau, Apellido: baltonra, Edad: 100
+Profesor 2: Nombre: hola, Apellido: peire, Edad: 12
+Profesor 3: Nombre: , Apellido: , Edad: 
+Profesor 4: Nombre: , Apellido: , Edad: 
+Profesor 5: Nombre: , Apellido: , Edad: 
+Profesor 1: Nombre: pau, Apellido: baltonra, Edad: 100
+Profesor 2: Nombre: hola, Apellido: peire, Edad: 12
+Profesor 3: Nombre: , Apellido: , Edad: 
+Profesor 4: Nombre: , Apellido: , Edad: 
+Profesor 5: Nombre: , Apellido: , Edad: 
+Profesor 1: Nombre: Nombre, Apellido: apellido, Edad: 22
+Profesor 2: Nombre: pepe, Apellido: dos, Edad: 22
+Profesor 3: Nombre: , Apellido: , Edad: 
+Profesor 4: Nombre: , Apellido: , Edad: 
+Profesor 5: Nombre: , Apellido: , Edad: 
+Profesor 1: Nombre: Nombre, Apellido: apellido, Edad: 22
+Profesor 2: Nombre: pau, Apellido: baltonra, Edad: 22
+Profesor 3: Nombre: , Apellido: , Edad: 
+Profesor 4: Nombre: , Apellido: , Edad: 
+Profesor 5: Nombre: , Apellido: , Edad: 
