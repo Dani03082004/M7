@@ -7,17 +7,17 @@
             <div id="profesor_camps">
                 <div>
                     <label class="block mb-1 text-sm font-medium text-gray-700" for="nombre">Nombre</label>
-                    <input class="block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" type="text" name="nombre[]" placeholder="nombre" value="<?= $_SESSION['nombre']?>" required>
+                    <input class="block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" type="text" name="nombre[]" placeholder="nombre" value="<?= isset($_SESSION['profesor' . $_SESSION['contador_profe']]['nombre']) ? $_SESSION['profesor' . $_SESSION['contador_profe']]['nombre'] : ''; ?>" required>
                 </div>
                 <br>
                 <div>
                     <label class="block mb-1 text-sm font-medium text-gray-700" for="apellido">Apellido</label>
-                    <input class="block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" type="text" name="apellido[]" placeholder="apellido" value="<?= $_SESSION['apellido']?>" required>
+                    <input class="block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" type="text" name="apellido[]" placeholder="apellido" value="<?= isset($_SESSION['profesor' . $_SESSION['contador_profe']]['apellido']) ? $_SESSION['profesor' . $_SESSION['contador_profe']]['apellido'] : ''; ?>" required>
                 </div>
                 <br>
                 <div>
                     <label class="block mb-1 text-sm font-medium text-gray-700" for="edad">Edad</label>
-                    <input class="block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" type="number" name="edad[]" placeholder="edad" value="<?= $_SESSION['edad']?>" required>
+                    <input class="block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" type="number" name="edad[]" placeholder="edad" value="<?= isset($_SESSION['profesor' . $_SESSION['contador_profe']]['edad']) ? $_SESSION['profesor' . $_SESSION['contador_profe']]['edad'] : ''; ?>" required>
                 </div>
             </div>
 

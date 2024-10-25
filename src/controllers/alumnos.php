@@ -1,37 +1,38 @@
 <?php
-
-require VIEWS.'/form.alumnos.php';
 session_start();
 
+$_SESSION['contador_alum'] = 0;
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if (!isset($_SESSION['contador_alumnos'])) {
-        $_SESSION['contador_alumnos'] = 0;
-    }
+    $nuevosAlumnos = [];
 
-    foreach ($_POST['nombre'] as $key => $nombre) {
-        $_SESSION['contador_alumnos']++;
-        $_SESSION['alumnos_' . $_SESSION['contador_alumnos']] = [
+    foreach ($_POST['nombre_alumno'] as $key => $nombre) {
+        $_SESSION['contador_alum']++;
+        $_SESSION['alumno' . $_SESSION['contador_alum']] = [
             'nombre'   => $nombre,
-            'apellido' => $_POST['apellido'][$key],
-            'edad'     => $_POST['edad'][$key]
+            'apellido' => $_POST['apellido_alumno'][$key],
+            'edad'     => $_POST['edad_alumno'][$key]
         ];
+        $nuevosAlumnos[] = $_SESSION['alumno' . $_SESSION['contador_alum']];
     }
 
-    if ($_SESSION['contador_alumnos'] >= 5) {
+    // Guardar los datos en el archivo solo si se han ingresado menos de 5 alumnos
+    if ($_SESSION['contador_alum'] <= 5) {
         $filePath = __DIR__ . '/../models/archivotop.txt';
         $file = fopen($filePath, 'a');
 
-        for ($i = 1; $i <= 5; $i++) {
-            $alumnos = $_SESSION['alumnos_' . $i];
-            $linea = "alumnos $i: Nombre: " . $alumnos['nombre'] . ", Apellido: " . $alumnos['apellido'] . ", Edad: " . $alumnos['edad'] . "\n";
+        foreach ($nuevosAlumnos as $index => $alumno) {
+            $linea = "Alumno " . ($_SESSION['contador_alum'] - count($nuevosAlumnos) + $index + 1) . ": Nombre: " . $alumno['nombre'] . ", Apellido: " . $alumno['apellido'] . ", Edad: " . $alumno['edad'] . "\n";
             fwrite($file, $linea);
         }
 
         fclose($file);
-        header('Location:alumnos');
+        header('Location: materias'); 
         exit();
-    } else {
-        header('Location:profesores');
-        exit();
+    }else{
+        header('Location: profesores');
+        exit(); 
     }
 }
+
+require VIEWS . '/form.alumnos.php';

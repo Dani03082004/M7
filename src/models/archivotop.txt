@@ -1,20 +1,14 @@
-Profesor 1: Nombre: pau, Apellido: baltonra, Edad: 100
-Profesor 2: Nombre: hola, Apellido: peire, Edad: 12
-Profesor 3: Nombre: , Apellido: , Edad: 
-Profesor 4: Nombre: , Apellido: , Edad: 
-Profesor 5: Nombre: , Apellido: , Edad: 
-Profesor 1: Nombre: pau, Apellido: baltonra, Edad: 100
-Profesor 2: Nombre: hola, Apellido: peire, Edad: 12
-Profesor 3: Nombre: , Apellido: , Edad: 
-Profesor 4: Nombre: , Apellido: , Edad: 
-Profesor 5: Nombre: , Apellido: , Edad: 
-Profesor 1: Nombre: Nombre, Apellido: apellido, Edad: 22
-Profesor 2: Nombre: pepe, Apellido: dos, Edad: 22
-Profesor 3: Nombre: , Apellido: , Edad: 
-Profesor 4: Nombre: , Apellido: , Edad: 
-Profesor 5: Nombre: , Apellido: , Edad: 
-Profesor 1: Nombre: Nombre, Apellido: apellido, Edad: 22
-Profesor 2: Nombre: pau, Apellido: baltonra, Edad: 22
-Profesor 3: Nombre: , Apellido: , Edad: 
-Profesor 4: Nombre: , Apellido: , Edad: 
-Profesor 5: Nombre: , Apellido: , Edad: 
+
+Profesor 1: Nombre: Ter, Apellido: Stegen, Edad: 1
+Profesor 2: Nombre: Pau, Apellido: Cubarsi, Edad: 2
+Profesor 3: Nombre: Alejandro, Apellido: Balde, Edad: 3
+Profesor 4: Nombre: Ronald, Apellido: Araujo, Edad: 4
+Profesor 5: Nombre: Iñigo, Apellido: Martinez, Edad: 5
+Profesor 1: Nombre: Pablo, Apellido: Gavi, Edad: 6
+Profesor 1: Nombre: Ferran, Apellido: Torres, Edad: 7
+Profesor 1: Nombre: Pedri, Apellido: Gonzalez, Edad: 8
+Profesor 1: Nombre: Robert , Apellido: Lewandowski, Edad: 9
+Profesor 1: Nombre: Ansumane, Apellido: Fati, Edad: 10 
+Profesor 1: Nombre: Raphael, Apellido: Dias Beloli, Edad: 11
+Profesor 1: Nombre: Iñaki, Apellido: Peña, Edad: 13
+Profesor 1: Nombre: Pablo , Apellido: Torre, Edad: 14
