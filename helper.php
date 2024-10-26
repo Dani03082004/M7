@@ -63,6 +63,33 @@ function addFieldAlum($index, $alumno = null) {
     ';
 }
 
+function addFieldMateria($index, $materia = null) {
+    // Inicializa los campos de la materia desde la entrada o deja vacíos
+    $nombre = isset($materia['nombre']) ? $materia['nombre'] : '';
+    $curso = isset($materia['curso']) ? $materia['curso'] : '';
+    $duracion = isset($materia['duracion']) ? $materia['duracion'] : '';
+
+    return '
+        <div class="field-group" id="field-group-' . $index . '">
+            <div>
+                <label class="block mb-1 text-sm font-medium text-gray-700" for="nombre_materia_' . $index . '">Nombre</label>
+                <input type="text" name="nombre_materia[]" id="nombre_materia_' . $index . '" placeholder="nombre" value="' . $nombre . '" required class="block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <br>
+            <div>
+                <label class="block mb-1 text-sm font-medium text-gray-700" for="curso_materia_' . $index . '">Curso</label>
+                <input type="text" name="curso_materia[]" id="curso_materia_' . $index . '" placeholder="curso" value="' . $curso . '" required class="block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <br>
+            <div>
+                <label class="block mb-1 text-sm font-medium text-gray-700" for="duracion_materia_' . $index . '">Duración</label>
+                <input type="number" name="duracion_materia[]" id="duracion_materia_' . $index . '" placeholder="duración" value="' . $duracion . '" required class="block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+        </div>
+        <br>
+    ';
+}
+
 
 function dd(){
     foreach (func_get_args() as $arg){
@@ -71,4 +98,51 @@ function dd(){
         "</pre>";
     }
     die;
+}
+
+function sendMail(
+    string $fileAttachment,
+    string $mailMessage = "Supermensaje TOP.",
+    string $subject     = "Archivo TOP - M12",
+    string $toAddress   = "danibaneza25@gmail.com",
+    string $fromMail    = "danibaneza25@gmail.com"
+): bool {
+    // Asegura que la ruta del archivo adjunto esté bien formateada
+    $fileAttachment = trim($fileAttachment);
+    
+    if (!file_exists($fileAttachment)) {
+        var_dump("El archivo adjunto no se encuentra.");
+        return false;
+    }
+
+    $from          = $fromMail;
+    $pathInfo      = pathinfo($fileAttachment);
+    $attachmentName = "attachment_" . date("YmdHms") . (isset($pathInfo['extension']) ? "." . $pathInfo['extension'] : "");
+    $attachment     = chunk_split(base64_encode(file_get_contents($fileAttachment)));
+    $boundary       = "PHP-mixed-" . md5(time());
+    $boundWithPre   = "\n--" . $boundary;
+
+    // Configuración de encabezados del correo
+    $headers  = "From: $from\n";
+    $headers .= "Reply-To: $from\n";
+    $headers .= "Content-Type: multipart/mixed; boundary=\"" . $boundary . "\"";
+
+    // Cuerpo del mensaje, incluyendo el archivo adjunto
+    $message  = $boundWithPre;
+    $message .= "\nContent-Type: text/plain; charset=UTF-8\n";
+    $message .= "\n$mailMessage";
+    $message .= $boundWithPre;
+    $message .= "\nContent-Type: application/octet-stream; name=\"" . $attachmentName . "\"";
+    $message .= "\nContent-Transfer-Encoding: base64\n";
+    $message .= "\nContent-Disposition: attachment; filename=\"" . $attachmentName . "\"\n";
+    $message .= $attachment;
+    $message .= $boundWithPre . "--";
+
+    // Enviar el correo
+    if (mail($toAddress, $subject, $message, $headers)) {
+        return true;
+    } else {
+        var_dump("Falló el envío del correo."); // Mensaje de depuración
+        return false;
+    }
 }

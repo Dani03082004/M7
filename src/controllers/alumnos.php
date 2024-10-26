@@ -3,6 +3,13 @@ session_start();
 
 $_SESSION['contador_alum'] = 0;
 
+// Verifica si el contador de profesores está configurado en la sesión
+if (!isset($_SESSION['contador_profe']) || $_SESSION['contador_profe'] == 0) {
+    // Si no hay datos de profesores, redirige al formulario de profesores
+    header('Location: profesores');
+    exit();
+}
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nuevosAlumnos = [];
 
@@ -27,10 +34,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
         fclose($file);
-        header('Location: materias'); 
+        header('Location:materias'); 
         exit();
     }else{
-        header('Location: profesores');
+        header('Location:profesores');
         exit(); 
     }
 }

@@ -12,3 +12,11 @@ Profesor 1: Nombre: Ansumane, Apellido: Fati, Edad: 10
 Profesor 1: Nombre: Raphael, Apellido: Dias Beloli, Edad: 11
 Profesor 1: Nombre: Iñaki, Apellido: Peña, Edad: 13
 Profesor 1: Nombre: Pablo , Apellido: Torre, Edad: 14
+Profesor 1: Nombre: Andreas, Apellido: Christensen, Edad: 15
+Alumno 1: Nombre: Fermin, Apellido: Lopez, Edad: 16
+Profesor 1: Nombre: Marc, Apellido: Casadó, Edad: 17
+Alumno 1: Nombre: Pau, Apellido: Victor, Edad: 18
+Materia 1: Nombre: Liga Española, Curso: 2024, Duración: 38
+Profesor 1: Nombre: pepito, Apellido: pepe, Edad: 11
+Alumno 1: Nombre: pepito, Apellido: pepe, Edad: 11
+Materia 1: Nombre: pepito, Curso: 11, Duración: 11

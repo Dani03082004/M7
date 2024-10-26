@@ -1,13 +1,13 @@
-let contador_alumno = 1; // Contador lo iniciamos a 1
+let contador_alum = 1; // Contador de alumnos iniciado en 1
 
 function addFieldAlum() {
-    if (contador_alumno < 5) { // Máximo de 5 
-        const alumno_camps = document.getElementById('alumno_camps');
+    if (contador_alum < 5) { // Máximo de 5 alumnos
+        const alumnos_camps = document.getElementById('alumnos_camps');
         
-        // Creamos contenedor para los nuevos campos
+        // Crear contenedor para los nuevos campos
         const nuevo_campo = document.createElement('div');
         
-        // Generar los nuevos campos del botón Añadir más
+        // Generar los nuevos campos del botón "Añadir más alumnos"
         nuevo_campo.innerHTML = `
             <br>
             <div>
@@ -27,10 +27,13 @@ function addFieldAlum() {
             <br>
         `;
 
-        // Añadir el nuevos campos al formulario
-        alumno_camps.appendChild(nuevo_campo);
-        contador_alumno++;
+        // Añadir los nuevos campos al formulario de alumnos
+        alumnos_camps.appendChild(nuevo_campo);
+        contador_alum++;
     } else {
-        alert("No se puede tener más de 5 alumnos.");
+        alert("No se puede añadir más de 5 alumnos.");
     }
 }
+
+
+
