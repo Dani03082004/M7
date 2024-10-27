@@ -1,13 +1,9 @@
 <?php
+
 session_start();
 
-$_SESSION['contador_alum'] = 0;
-
-// Verifica si el contador de profesores está configurado en la sesión
-if (!isset($_SESSION['contador_profe']) || $_SESSION['contador_profe'] == 0) {
-    // Si no hay datos de profesores, redirige al formulario de profesores
-    header('Location: profesores');
-    exit();
+if (!isset($_SESSION['contador_alum'])) {
+    $_SESSION['contador_alum'] = 0;
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -42,4 +38,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 
-require VIEWS . '/form.alumnos.php';
+require VIEWS.'/form.alumnos.php';

@@ -1,7 +1,9 @@
 <?php
 session_start();
 
-$_SESSION['contador_materia'] = 0;
+if (!isset($_SESSION['contador_materia'])) {
+    $_SESSION['contador_materia'] = 0;
+}
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nuevasMaterias = [];
@@ -17,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     // Guardar los datos en el archivo solo si se han ingresado menos de 5 materias
-    if ($_SESSION['contador_materia'] <= 5) {
+    if ($_SESSION['contador_materia'] <= 5) { // Cambiado de >= a <=
         $filePath = __DIR__ . '/../models/archivotop.txt';
         $file = fopen($filePath, 'a');
 
@@ -27,12 +29,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
         fclose($file);
-        header('Location:final');
+        header('Location:final'); // Redirige al formulario final
         exit();
     } else {
-        header('Location:alumnos');
+        header('Location:alumnos'); // Si se excede el límite, redirige a alumnos
         exit(); 
     }
 }
 
+// Mostrar el formulario de materias
 require VIEWS . '/form.materias.php';

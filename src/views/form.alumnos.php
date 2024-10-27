@@ -7,17 +7,17 @@
             <div id="alumnos_camps">
                 <div>
                     <label class="block mb-1 text-sm font-medium text-gray-700" for="nombre">Nombre</label>
-                    <input class="block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" type="text" name="nombre_alumno[]" placeholder="nombre" value="<?= isset($_SESSION['alumno' . $_SESSION['contador_alum']]['nombre_alumno']) ? $_SESSION['alumno' . $_SESSION['contador_alum']]['nombre_alumno'] : ''; ?>" required>
+                    <input class="block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" type="text" name="nombre_alumno[]" placeholder="nombre" value="<?= isset($_SESSION['alumno' . ($_SESSION['contador_alum'] - 1)]['nombre']) ? $_SESSION['alumno' . ($_SESSION['contador_alum'] - 1)]['nombre'] : ''; ?>" required>
                 </div>
                 <br>
                 <div>
                     <label class="block mb-1 text-sm font-medium text-gray-700" for="apellido">Apellido</label>
-                    <input class="block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" type="text" name="apellido_alumno[]" placeholder="apellido" value="<?= isset($_SESSION['alumno' . $_SESSION['contador_alum']]['apellido_alumno']) ? $_SESSION['alumno' . $_SESSION['contador_alum']]['apellido_alumno'] : ''; ?>" required>
+                    <input class="block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" type="text" name="apellido_alumno[]" placeholder="apellido" value="<?= isset($_SESSION['alumno' . ($_SESSION['contador_alum'] - 1)]['apellido']) ? $_SESSION['alumno' . ($_SESSION['contador_alum'] - 1)]['apellido'] : ''; ?>" required>
                 </div>
                 <br>
                 <div>
                     <label class="block mb-1 text-sm font-medium text-gray-700" for="edad">Edad</label>
-                    <input class="block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" type="number" name="edad_alumno[]" placeholder="edad" value="<?= isset($_SESSION['alumno' . $_SESSION['contador_alum']]['edad_alumno']) ? $_SESSION['alumno' . $_SESSION['contador_alum']]['edad_alumno'] : ''; ?>" required>
+                    <input class="block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" type="number" name="edad_alumno[]" placeholder="edad" value="<?= isset($_SESSION['alumno' . ($_SESSION['contador_alum'] - 1)]['edad']) ? $_SESSION['alumno' . ($_SESSION['contador_alum'] - 1)]['edad'] : ''; ?>" required>
                 </div>
             </div>
 

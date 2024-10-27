@@ -2,7 +2,10 @@
 
 session_start();
 
-$_SESSION['contador_profe'] = 0;
+if (!isset($_SESSION['contador_profe'])) {
+    $_SESSION['contador_profe'] = 0;
+}
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nuevosDatos = [];
     

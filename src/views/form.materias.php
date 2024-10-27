@@ -7,17 +7,17 @@
             <div id="materias_camps">
                 <div>
                     <label class="block mb-1 text-sm font-medium text-gray-700" for="nombre_materia">Nombre</label>
-                    <input class="block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" type="text" name="nombre_materia[]" placeholder="Nombre" value="<?= isset($_SESSION['materia' . $_SESSION['contador_materias']]['nombre_materia']) ? $_SESSION['materia' . $_SESSION['contador_materias']]['nombre_materia'] : ''; ?>" required>
+                    <input class="block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" type="text" name="nombre_materia[]" placeholder="Nombre" value="<?= isset($_SESSION['materia' . ($_SESSION['contador_materia'] - 1)]['nombre']) ? $_SESSION['materia' . ($_SESSION['contador_materia'] - 1)]['nombre'] : ''; ?>" required>
                 </div>
                 <br>
                 <div>
                     <label class="block mb-1 text-sm font-medium text-gray-700" for="curso_materia">Curso</label>
-                    <input class="block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" type="text" name="curso_materia[]" placeholder="Curso" value="<?= isset($_SESSION['materia' . $_SESSION['contador_materias']]['curso_materia']) ? $_SESSION['materia' . $_SESSION['contador_materias']]['curso_materia'] : ''; ?>" required>
+                    <input class="block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" type="text" name="curso_materia[]" placeholder="Curso" value="<?= isset($_SESSION['materia' . ($_SESSION['contador_materia'] - 1)]['curso']) ? $_SESSION['materia' . ($_SESSION['contador_materia'] - 1)]['curso'] : ''; ?>" required>
                 </div>
                 <br>
                 <div>
                     <label class="block mb-1 text-sm font-medium text-gray-700" for="duracion_materia">Duración</label>
-                    <input class="block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" type="number" name="duracion_materia[]" placeholder="Duración" value="<?= isset($_SESSION['materia' . $_SESSION['contador_materias']]['duracion_materia']) ? $_SESSION['materia' . $_SESSION['contador_materias']]['duracion_materia'] : ''; ?>" required>
+                    <input class="block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" type="number" name="duracion_materia[]" placeholder="Duración" value="<?= isset($_SESSION['materia' . ($_SESSION['contador_materia'] - 1)]['duracion']) ? $_SESSION['materia' . ($_SESSION['contador_materia'] - 1)]['duracion'] : ''; ?>" required>
                 </div>
             </div>
 

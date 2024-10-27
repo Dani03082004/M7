@@ -7,10 +7,12 @@
         <form id="final_form" class="m-2 grid grid-cols-1 gap-4" action="final" method="POST">
             <div>
                 <label class="block mb-1 text-sm font-medium text-gray-700" for="email">Correo Electrónico</label>
-                <input type="email" name="email" id="email" placeholder="Correo Electrónico" required class="block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <input type="email" name="email" id="email" placeholder="Correo Electrónico" class="block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
             </div>
-            
-            <div class="flex justify-center mt-4">
+
+            <div class="flex justify-between mt-4">
+                <!-- Botón de Atrás -->
+                <button type="button" onclick="window.location.href='materias'" class="inline-flex items-center px-4 py-2 bg-red-600 text-white font-semibold rounded-md hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-400">Atrás</button>
                 <button type="submit" class="px-4 py-2 bg-green-600 text-white font-semibold rounded-md hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-green-400">Enviar</button>
             </div>
         </form>
