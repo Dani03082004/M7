@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $nuevosDatos[] = $_SESSION['profesor' . $_SESSION['contador_profe']]; 
     }
 
-    if ($_SESSION['contador_profe'] <= 5) {
+    if ($_SESSION['contador_profe'] <= 20) {
         $filePath = __DIR__ . '/../models/archivotop.txt';
         $file = fopen($filePath, 'a');
 

@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     // Guardar los datos en el archivo solo si se han ingresado menos de 5 materias
-    if ($_SESSION['contador_materia'] <= 5) { // Cambiado de >= a <=
+    if ($_SESSION['contador_materia'] <= 20) { 
         $filePath = __DIR__ . '/../models/archivotop.txt';
         $file = fopen($filePath, 'a');
 

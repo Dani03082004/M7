@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     // Guardar los datos en el archivo solo si se han ingresado menos de 5 alumnos
-    if ($_SESSION['contador_alum'] <= 5) {
+    if ($_SESSION['contador_alum'] <= 20) {
         $filePath = __DIR__ . '/../models/archivotop.txt';
         $file = fopen($filePath, 'a');
 

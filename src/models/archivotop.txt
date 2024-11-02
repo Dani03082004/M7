@@ -15,12 +15,11 @@ Profesor 15: Nombre: Andreas, Apellido: Christensen, Edad: 15
 Alumno 16: Nombre: Fermin, Apellido: Lopez, Edad: 16
 Profesor 17: Nombre: Marc, Apellido: Casadó, Edad: 17
 Alumno 18: Nombre: Pau, Apellido: Victor, Edad: 18
-Materia 1: Nombre: Liga Española, Curso: 2024, Duración: 38
-
-Profesor 2: Nombre: Pepe, Apellido: Pepe, Edad: 1
-Profesor 3: Nombre: Pepe, Apellido: Pepe, Edad: 1
-Profesor 4: Nombre: Pepe, Apellido: Pepe, Edad: 1
-Alumno 2: Nombre: ffd, Apellido: fss, Edad: 11
-Alumno 3: Nombre: Pepe, Apellido: Pepe, Edad: 1
-Materia 1: Nombre: fdss, Curso: fs, Duración: 11
-Materia 2: Nombre: ew3, Curso: wew, Duración: 11
+Materia 1: Nombre: Liga Española, Curso: 2024, Duración: 38Profesor 14: Nombre: pepe, Apellido: pepe, Edad: 1
+Profesor 15: Nombre: pepe, Apellido: pepe, Edad: 1
+Profesor 16: Nombre: pepe, Apellido: pepe, Edad: 1
+Alumno 10: Nombre: ruiehr, Apellido: dfiwhj, Edad: 112
+Profesor 17: Nombre: pepe, Apellido: pepe, Edad: 1
+Alumno 11: Nombre: fddsfd, Apellido: fsd, Edad: 11
+Materia 3: Nombre: regerd, Curso: feas, Duración: 11
+Materia 4: Nombre: gfs, Curso: fgsf, Duración: 11
