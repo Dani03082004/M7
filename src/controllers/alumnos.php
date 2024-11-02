@@ -1,41 +1,37 @@
 <?php
-
 session_start();
 
-if (!isset($_SESSION['contador_alum'])) {
-    $_SESSION['contador_alum'] = 0;
+if (!isset($_SESSION['alumno'])) {
+    $_SESSION['alumno'] = []; // Inicializa el array de alumnos si no existe
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $nuevosAlumnos = [];
-
     foreach ($_POST['nombre_alumno'] as $key => $nombre) {
-        $_SESSION['contador_alum']++;
-        $_SESSION['alumno' . $_SESSION['contador_alum']] = [
+        $_SESSION['alumno'][] = [
             'nombre'   => $nombre,
             'apellido' => $_POST['apellido_alumno'][$key],
             'edad'     => $_POST['edad_alumno'][$key]
         ];
-        $nuevosAlumnos[] = $_SESSION['alumno' . $_SESSION['contador_alum']];
     }
 
-    // Guardar los datos en el archivo solo si se han ingresado menos de 5 alumnos
-    if ($_SESSION['contador_alum'] <= 20) {
+    // Guardar los datos en el archivo solo si se han ingresado menos de 20 alumnos
+    if (count($_SESSION['alumno']) <= 20) {
         $filePath = __DIR__ . '/../models/archivotop.txt';
         $file = fopen($filePath, 'a');
 
-        foreach ($nuevosAlumnos as $index => $alumno) {
-            $linea = "Alumno " . ($_SESSION['contador_alum'] - count($nuevosAlumnos) + $index + 1) . ": Nombre: " . $alumno['nombre'] . ", Apellido: " . $alumno['apellido'] . ", Edad: " . $alumno['edad'] . "\n";
+        foreach ($_SESSION['alumno'] as $index => $alumno) {
+            $linea = "Alumno " . ($index + 1) . ": Nombre: " . $alumno['nombre'] . ", Apellido: " . $alumno['apellido'] . ", Edad: " . $alumno['edad'] . "\n";
             fwrite($file, $linea);
         }
 
         fclose($file);
-        header('Location:materias'); 
+        header('Location: materias'); 
         exit();
-    }else{
-        header('Location:profesores');
+    } else {
+        header('Location: profesores');
         exit(); 
     }
 }
 
-require VIEWS.'/form.alumnos.php';
+// Mostrar el formulario de alumnos
+require VIEWS . '/form.alumnos.php';
