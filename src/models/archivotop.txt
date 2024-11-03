@@ -1,53 +1,7 @@
+
 Profesor 1: Nombre: Ter, Apellido: Stegen, Edad: 1
 Profesor 2: Nombre: Pau, Apellido: Cubarsi, Edad: 2
-Profesor 3: Nombre: Alejandro, Apellido: Balde, Edad: 3
-Profesor 4: Nombre: Ronald, Apellido: Araujo, Edad: 4
-Profesor 5: Nombre: Iñigo, Apellido: Martinez, Edad: 5
-Profesor 6: Nombre: Pablo, Apellido: Gavi, Edad: 6
-Profesor 7: Nombre: Ferran, Apellido: Torres, Edad: 7
-Profesor 8: Nombre: Pedri, Apellido: Gonzalez, Edad: 8
-Profesor 9: Nombre: Robert , Apellido: Lewandowski, Edad: 9
-Profesor 10: Nombre: Ansumane, Apellido: Fati, Edad: 10 
-Profesor 11: Nombre: Raphael, Apellido: Dias Beloli, Edad: 11
-Profesor 13: Nombre: Iñaki, Apellido: Peña, Edad: 13
-Profesor 14: Nombre: Pablo , Apellido: Torre, Edad: 14
-Profesor 15: Nombre: Andreas, Apellido: Christensen, Edad: 15
-Alumno 16: Nombre: Fermin, Apellido: Lopez, Edad: 16
-Profesor 17: Nombre: Marc, Apellido: Casadó, Edad: 17
-Alumno 18: Nombre: Pau, Apellido: Victor, Edad: 18
-Materia 1: Nombre: Liga Española, Curso: 2024, Duración: 38
-Profesor 14: Nombre: pepe, Apellido: pepe, Edad: 1
-Profesor 15: Nombre: pepe, Apellido: pepe, Edad: 1
-Profesor 16: Nombre: pepe, Apellido: pepe, Edad: 1
-Alumno 10: Nombre: ruiehr, Apellido: dfiwhj, Edad: 112
-Profesor 17: Nombre: pepe, Apellido: pepe, Edad: 1
-Alumno 11: Nombre: fddsfd, Apellido: fsd, Edad: 11
-Materia 3: Nombre: regerd, Curso: feas, Duración: 11
-Materia 4: Nombre: gfs, Curso: fgsf, Duración: 11
-Alumno 6: Nombre: pepowe, Apellido: djejo, Edad: 12
-Materia 1: Nombre: fdsfcasd, Curso: 11, Duración: 11
-Materia 2: Nombre: ewew, Curso: ewe, Duración: 11
-Profesor 3: Nombre: peipere, Apellido: pepeere, Edad: 112
-Profesor 4: Nombre: peipere, Apellido: pepeere, Edad: 112
-Alumno 1: Nombre: pepepeoipr, Apellido: eoiwieoipq, Edad: 21
-Alumno 1: Nombre: pepepeoipr, Apellido: eoiwieoipq, Edad: 21
-Alumno 2: Nombre: pepepeoipr, Apellido: eoiwieoipq, Edad: 21
-Materia 1: Nombre: rgter, Curso: 12, Duración: 12
-Materia 1: Nombre: rgter, Curso: 12, Duración: 12
-Materia 2: Nombre: fdsfcasd, Curso: 11, Duración: 11
-Materia 1: Nombre: rgter, Curso: 12, Duración: 12
-Materia 2: Nombre: fdsfcasd, Curso: 11, Duración: 11
-Materia 3: Nombre: fdsfcasd, Curso: 11, Duración: 11
-Profesor 5: Nombre: peipere, Apellido: pepeere, Edad: 112
-Profesor 6: Nombre: peipere, Apellido: pepeere, Edad: 112
-Alumno 1: Nombre: pepepeoipr, Apellido: eoiwieoipq, Edad: 21
-Alumno 2: Nombre: pepepeoipr, Apellido: eoiwieoipq, Edad: 21
-Alumno 3: Nombre: pepeoep, Apellido: dwiodjo, Edad: 2122
-Alumno 1: Nombre: pepepeoipr, Apellido: eoiwieoipq, Edad: 21
-Alumno 2: Nombre: pepepeoipr, Apellido: eoiwieoipq, Edad: 21
-Alumno 3: Nombre: pepeoep, Apellido: dwiodjo, Edad: 2122
-Alumno 4: Nombre: pepeoep, Apellido: dwiodjo, Edad: 2122
-Materia 1: Nombre: rgter, Curso: 12, Duración: 12
-Materia 2: Nombre: fdsfcasd, Curso: 11, Duración: 11
-Materia 3: Nombre: fdsfcasd, Curso: 11, Duración: 11
-Materia 4: Nombre: fdsfcasd, Curso: 11, Duración: 11
+Alumno 1: Nombre: Alejandro, Apellido: Balde, Edad: 3
+Alumno 2: Nombre: Ronald, Apellido: Araujo, Edad: 4
+Materia 1: Nombre: Liga, Curso: 2020, Duración: 2222
+Materia 2: Nombre: Liga, Curso: 2020, Duración: 2024

@@ -11,7 +11,6 @@
             </div>
 
             <div class="flex justify-between mt-4">
-                <!-- Botón de Atrás -->
                 <button type="button" onclick="window.location.href='materias'" class="inline-flex items-center px-4 py-2 bg-red-600 text-white font-semibold rounded-md hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-400">Atrás</button>
                 <button type="submit" class="px-4 py-2 bg-green-600 text-white font-semibold rounded-md hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-green-400">Enviar</button>
             </div>

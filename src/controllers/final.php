@@ -1,23 +1,24 @@
 <?php
 
+// Iniciamos la session
 session_start();
 
+// Esta condición se ejecutará si le damos al botón de Siguiente
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Validar el correo electrónico
     $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
     
+    // Se cumplirá esta condición si llama correctamente a la función sendMail
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        // Llamar a la función sendMail
-        $fileAttachment = __DIR__ . '/../models/archivotop.txt'; // Cambia la ruta según tu estructura
-        if (sendMail($fileAttachment, "Aquí están los datos de los alumnos.", "Datos de Alumnos", $email)) {
-            var_dump("Se ha enviado correctamente el correo.");
+        $fileAttachment = __DIR__ . '/../models/archivotop.txt'; 
+        if (sendMail($fileAttachment, "Datos", "Datos", $email)) {
+            var_dump("El supuesto correo se ha enviado correctamente a su destinatario.");
         } else {
-            var_dump("No se pudo enviar el correo. Inténtalo de nuevo más tarde.");
+            var_dump("El correo no se ha enviado");
         }
     } else {
-        var_dump("Correo electrónico no válido.");
+        var_dump("Correo electrónico inválido.");
     }
 }
 
-// Mostrar el formulario aunque se haya enviado el correo
+// Llamamos a la vista del formulario final
 require VIEWS . '/form.final.php';

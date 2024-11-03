@@ -1,13 +1,13 @@
-let contador_materias = 1; // Contador de materias iniciado en 1
+/* Hacemos un botón utilizando Javascript para añadir más materias */
+// Nos servirá para ir añadiendo materias hasta un máximo de 5 veces
+
+let contador_materias = 1; 
 
 function addFieldMateria() {
-    if (contador_materias < 5) { // Máximo de 5 materias
+    if (contador_materias < 5) { 
         const materias_camps = document.getElementById('materias_camps');
-        
-        // Crear contenedor para los nuevos campos
         const nuevo_campo = document.createElement('div');
         
-        // Generar los nuevos campos para añadir más materias
         nuevo_campo.innerHTML = `
             <br>
             <div>
@@ -26,11 +26,9 @@ function addFieldMateria() {
             </div>
             <br>
         `;
-
-        // Añadir los nuevos campos al formulario de materias
         materias_camps.appendChild(nuevo_campo);
         contador_materias++;
     } else {
-        alert("No se puede añadir más de 5 materias.");
+        alert("Tristemente, sintiendolo mucho no puedes añadir más de 5 materias.");
     }
 }

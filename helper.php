@@ -1,4 +1,6 @@
 <?php
+
+// Función Router
     function router(array $routes):string {
         $url=parse_url($_SERVER['REQUEST_URI'])['path'];
         $path=explode('/',$url);
@@ -15,8 +17,8 @@
     http_response_code(404);
 }
 
+// Función para añadir nuevos profesores
 function addFieldProf($index, $profesor = null) {
-    // el isset comprueba si esta declarada y el empty comprueba si esta vacio
     $nombre = isset($profesor['nombre']) ? htmlspecialchars($profesor['nombre']) : '';
     $apellido = isset($profesor['apellido']) ? htmlspecialchars($profesor['apellido']) : '';
     $edad = isset($profesor['edad']) ? htmlspecialchars($profesor['edad']) : '';
@@ -36,8 +38,8 @@ function addFieldProf($index, $profesor = null) {
     ';
 }
 
+// Función para añadir nuevos alumnos
 function addFieldAlum($index, $alumno = null) {
-    // Inicializa los campos del alumno desde la entrada o deja vacíos
     $nombre = isset($alumno['nombre']) ? $alumno['nombre'] : '';
     $apellido = isset($alumno['apellido']) ? $alumno['apellido'] : '';
     $edad = isset($alumno['edad']) ? $alumno['edad'] : '';
@@ -63,8 +65,8 @@ function addFieldAlum($index, $alumno = null) {
     ';
 }
 
+// Función para añadir nuevas materias
 function addFieldMateria($index, $materia = null) {
-    // Inicializa los campos de la materia desde la entrada o deja vacíos
     $nombre = isset($materia['nombre']) ? $materia['nombre'] : '';
     $curso = isset($materia['curso']) ? $materia['curso'] : '';
     $duracion = isset($materia['duracion']) ? $materia['duracion'] : '';
@@ -90,7 +92,7 @@ function addFieldMateria($index, $materia = null) {
     ';
 }
 
-
+// Función para mostrar los datos correspondientes
 function dd(){
     foreach (func_get_args() as $arg){
         echo "<pre>";
@@ -100,6 +102,7 @@ function dd(){
     die;
 }
 
+// Función para enviar Mail
 function sendMail(
     string $fileAttachment,
     string $mailMessage = "Supermensaje TOP.",
@@ -107,7 +110,6 @@ function sendMail(
     string $toAddress   = "danibaneza25@gmail.com",
     string $fromMail    = "danibaneza25@gmail.com"
 ): bool {
-    // Asegura que la ruta del archivo adjunto esté bien formateada
     $fileAttachment = trim($fileAttachment);
     
     if (!file_exists($fileAttachment)) {
@@ -122,12 +124,10 @@ function sendMail(
     $boundary       = "PHP-mixed-" . md5(time());
     $boundWithPre   = "\n--" . $boundary;
 
-    // Configuración de encabezados del correo
     $headers  = "From: $from\n";
     $headers .= "Reply-To: $from\n";
     $headers .= "Content-Type: multipart/mixed; boundary=\"" . $boundary . "\"";
 
-    // Cuerpo del mensaje, incluyendo el archivo adjunto
     $message  = $boundWithPre;
     $message .= "\nContent-Type: text/plain; charset=UTF-8\n";
     $message .= "\n$mailMessage";
@@ -138,11 +138,10 @@ function sendMail(
     $message .= $attachment;
     $message .= $boundWithPre . "--";
 
-    // Enviar el correo
     if (mail($toAddress, $subject, $message, $headers)) {
         return true;
     } else {
-        var_dump("Falló el envío del correo."); // Mensaje de depuración
+        var_dump("Falló el envío del correo."); 
         return false;
     }
 }

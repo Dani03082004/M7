@@ -1,13 +1,13 @@
-let contador_profe = 1; // Contador de profesores lo iniciamos a 1
+/* Utilizando JavaScript haremos un botón que nos permitirá añadir profesores*/
+// Hasta un máximo de 5 veces --> Máximo 5 profesores
+
+let contador_profe = 1; 
 
 function addFieldProf() {
-    if (contador_profe < 5) { // Máximo de 5 profesores
+    if (contador_profe < 5) { 
         const profesor_camps = document.getElementById('profesor_camps');
-        
-        // Creamos contenedor para los nuevos campos
         const nuevo_campo = document.createElement('div');
         
-        // Generar los nuevos campos del botón Añadir más
         nuevo_campo.innerHTML = `
             <br>
             <div>
@@ -26,11 +26,9 @@ function addFieldProf() {
             </div>
             <br>
         `;
-
-        // Añadir el nuevos campos al formulario
         profesor_camps.appendChild(nuevo_campo);
         contador_profe++;
     } else {
-        alert("No se puede tener más de 5 profesores.");
+        alert("NO, puedes añadir más de 5 profesores.");
     }
 }
